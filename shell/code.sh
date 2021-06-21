@@ -7,7 +7,7 @@ dir_shell=/ql/shell
 ## 生成pt_pin清单
 gen_pt_pin_array() {
     local tmp1 tmp2 i pt_pin_temp
-    for ((user_num = 1; user_num <= $user_sum; user_num++)); do
+    for ((user_num = 1; user_num -le $user_sum; user_num++)); do
         tmp1=Cookie$user_num
         tmp2=${!tmp1}
         i=$(($user_num - 1))
